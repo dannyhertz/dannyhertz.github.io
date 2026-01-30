@@ -34,6 +34,27 @@
       color: #000;
       border-color: #000;
     }
+    .pug {
+      position: fixed;
+      bottom: -50px;
+      right: 20px;
+      width: 140px;
+      z-index: 10;
+      transition: bottom 0.4s ease;
+    }
+    .pug.hiding {
+      bottom: -200px;
+    }
+    @media (max-width: 600px) {
+      .pug {
+        width: 100px;
+        right: 10px;
+        bottom: -35px;
+      }
+      .pug.hiding {
+        bottom: -150px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -41,5 +62,13 @@
     <h1>Danny Hertz</h1>
     <p><a href="mailto:me@dannyhertz.com">me@dannyhertz.com</a></p>
   </main>
+  <img src="pug.png" alt="Pug" class="pug" id="pug">
+  <script>
+    const pug = document.getElementById('pug');
+    pug.addEventListener('mouseenter', () => {
+      pug.classList.add('hiding');
+      setTimeout(() => pug.classList.remove('hiding'), 2000);
+    });
+  </script>
 </body>
 </html>
