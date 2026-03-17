@@ -34,6 +34,54 @@
       color: #000;
       border-color: #000;
     }
+    .making {
+      margin-top: 2.5rem;
+    }
+    .making-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #999;
+      margin-bottom: 0.75rem;
+    }
+    .apps {
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      border: none;
+      transition: transform 0.2s ease;
+    }
+    .app:hover {
+      transform: translateY(-3px);
+      color: #555;
+      border: none;
+    }
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: box-shadow 0.2s ease;
+    }
+    .app:hover .app-icon {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    }
+    .app-name {
+      font-size: 0.8rem;
+      color: #555;
+    }
+    img.app-icon {
+      display: block;
+      object-fit: cover;
+    }
     .pug {
       position: fixed;
       bottom: -50px;
@@ -61,6 +109,16 @@
   <main>
     <h1>Danny Hertz</h1>
     <p><a href="mailto:me@dannyhertz.com">me@dannyhertz.com</a></p>
+
+    <div class="making">
+      <p class="making-label">making</p>
+      <div class="apps">
+        <a href="https://apps.apple.com/us/app/tinyboard-nyc/id6757965417" class="app">
+          <img src="tinyboard-icon.png" alt="TinyBoard" class="app-icon">
+          <span class="app-name">TinyBoard</span>
+        </a>
+      </div>
+    </div>
   </main>
   <img src="pug.png" alt="Pug" class="pug" id="pug">
   <script>
